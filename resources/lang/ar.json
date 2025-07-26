@@ -4,5 +4,9 @@
     "Register": "إنشاء حساب",
     "Logout": "تسجيل الخروج",
     "Browse Products": "تصفح المنتجات",
-    "Hello": "مرحبًا"
+    "Hello": "مرحبًا",
+    "Products": "المنتجات",
+    "Price": "السعر",
+    "View Details": "عرض التفاصيل",
+    "No products available": "لا توجد منتجات متاحة"
 }

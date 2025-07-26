@@ -40,3 +40,8 @@ Route::get('lang/{locale}', function ($locale) {
 
     return redirect()->back();
 })->name('lang.switch');
+
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
