@@ -45,12 +45,12 @@ Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('regi
 Route::post('/register', [AuthController::class, 'register']);
 
 // 🛍️ واجهة عامة للمنتجات (إن وجدت)
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+//Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 // 🧭 راوتات لوحة التحكم - منتجات
-Route::get('/dashboard/products',         [DashboardProductController::class, 'index'])->name('dashboard.products.index');
-Route::get('/dashboard/products/create',  [DashboardProductController::class, 'create'])->name('dashboard.products.create');
-Route::post('/dashboard/products',        [DashboardProductController::class, 'store'])->name('dashboard.products.store');
+//Route::get('/dashboard/products',         [DashboardProductController::class, 'index'])->name('dashboard.products.index');
+//Route::get('/dashboard/products/create',  [DashboardProductController::class, 'create'])->name('dashboard.products.create');
+//Route::post('/dashboard/products',        [DashboardProductController::class, 'store'])->name('dashboard.products.store');
 
 use App\Models\Product;
 

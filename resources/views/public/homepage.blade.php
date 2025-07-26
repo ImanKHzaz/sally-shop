@@ -6,6 +6,11 @@
             <h1>🎉 أهلاً بك في متجر Sally-Shop</h1>
             <p class="lead mt-3">استعرض المنتجات، وابدأ التسوّق الآن!</p>
         </div>
+        @auth
+            <div class="mb-4 text-center">
+                <h5 class="text-muted">👤 مسجّلة الدخول كـ {{ Auth::user()->name }}</h5>
+            </div>
+        @endauth
 
         <!-- روابط الإدارة -->
         @auth
