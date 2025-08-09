@@ -3,11 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
-
 // ✅ Controllers
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController; // كنترولر المنتجات العام
+use App\Http\Controllers\OrderController;
 
 // 🏠 الصفحة الرئيسية
 Route::get('/', fn() => view('public.homepage'))->name('homepage');
@@ -39,3 +40,23 @@ Route::get('/products', function () {
 
 // ✅ إن أردتِ استخدام Controller بدلاً من Closure:
 Route::get('/products/show', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+
+
+Route::get('/cart', [CartController::class, 'view'])->name('cart.view');
+
+
+Route::get('/cart', [CartController::class, 'view'])->name('cart.view');
+
+Route::post('/cart/{product}', [CartController::class, 'add'])->name('cart.add');
+
+
+Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+Route::get('/checkout', [OrderController::class, 'index'])->name('checkout');
+
+
+Route::get('/checkout', [OrderController::class, 'index'])->name('checkout');
+
+
+Route::post('/orders', [OrderController::class, 'store'])->name('order.store');
