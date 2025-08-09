@@ -23,7 +23,9 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->price }} $</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-warning">تعديل</a>
+                        <a href="{{ route('dashboard.products.edit', $product->id) }}"
+                            class="btn btn-sm btn-warning">تعديل</a>
+
                         <a href="#" class="btn btn-sm btn-danger">حذف</a>
                     </td>
                 </tr>

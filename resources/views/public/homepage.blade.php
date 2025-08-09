@@ -12,6 +12,18 @@
             </div>
         @endauth
 
+        @guest
+            <div class="text-center text-muted mb-3">
+                لم تقم بتسجيل الدخول بعد.
+            </div>
+            <div class="text-center">
+                <a href="{{ route('login') }}" class="btn btn-outline-primary">
+                    تسجيل الدخول
+                </a>
+            </div>
+        @endguest
+
+
         <!-- روابط الإدارة -->
         @auth
             @if (in_array(Auth::user()->role, ['admin', 'manager']))
